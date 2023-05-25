@@ -12,7 +12,7 @@
     display: grid;
     grid-template-columns: repeat(4, 75px);
     grid-template-rows: 160px repeat(5, 75px);
-    background-color: #0552b8;
+    background-color: #014beb;
     padding: 15px;
     border-radius: 32px;
     box-shadow: 15px 10px 0px 5px #00000033;
@@ -24,14 +24,27 @@ button {
     border-radius: 32px;
     font-size: 1.5em;
     border: none;
-    background-color: #3c3c3dfd;
-    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #1d1d1d1f;
+    background-color: #444444;
+    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #8c918f1f;
 }
 button:active {
-    background-color: #2c2c2cfd;
+    background-color: #2c2c2c;
 }
 button:focus {
     outline: none;
+}
+.operador {
+    color: #14eb00;
+}
+.igual{
+    background: #11cc00;
+    color: #ffffff;
+}
+.igual:active {
+    background: #2e9725ec;
+}
+.borrar {
+    color: #e6460c;
 }
 .col-2 {
     grid-column: span 2;
