@@ -1,13 +1,22 @@
 * {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P';
     color: white;
 }
-.container {
+.caja {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+/*.calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
+    background-color: #014beb;
+    padding: 15px;
+    border-radius: 32px;
+    box-shadow: 15px 10px 0px 5px #00000033;
+}*/
 .calculadora {
     display: grid;
     grid-template-columns: repeat(4, 75px);
@@ -16,12 +25,24 @@
     padding: 15px;
     border-radius: 32px;
     box-shadow: 15px 10px 0px 5px #00000033;
+    border: 5px solid;
+    animation: changeColor 5s infinite;
 }
+
+@keyframes changeColor {
+    0% {border-color: rgb(255, 0, 0);}
+    20% {border-color: rgb(95, 12, 228);} 
+    40% {border-color: rgb(4, 238, 255);} 
+    60% {border-color: rgb(235, 153, 2);}
+    80% {border-color: rgb(255, 0, 234);}
+    100% {border-color: rgb(255, 0, 0);}
+}
+
 button {
     cursor: pointer;
     margin: 5px;
     padding: 0;
-    border-radius: 32px;
+    border-radius: 30px;
     font-size: 1.5em;
     border: none;
     background-color: #444444;
@@ -51,13 +72,13 @@ button:focus {
 }
 .display {
     grid-column: 1 / -1;
-    padding: 16px;
+    padding: 15px;
     display: flex;
     margin: 10px 10px 20px;
     flex-direction: column;
     align-items: flex-end;
     background-color: #363636;
-    border-radius: 32px;
+    border-radius: 30px;
     text-align: right;
     justify-content: space-between;
     word-break: break-all;
